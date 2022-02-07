@@ -8,11 +8,15 @@ exports.publicIo = () => publicIo;
 module.exports.init = (httpServer) => {
     privateIo = new Server(httpServer, {
         path: "/private/",
-        cors: process.env.CORS_ORIGIN,
+        cors: {
+            origin: "*",
+        },
     });
     publicIo = new Server(httpServer, {
         path: "/public/",
-        cors: process.env.CORS_ORIGIN,
+        cors: {
+            origin: "*",
+        },
     });
     socketRoute(privateIo, publicIo);
     return { privateIo, publicIo };
