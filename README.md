@@ -14,4 +14,4 @@ yarn start
 
 ## Client
 
-[Github](https://github.com/jackdo1012/app-client)
+[Github](https://github.com/jackdo1012/app)
